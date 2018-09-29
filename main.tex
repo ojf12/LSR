@@ -1,0 +1,65 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{pgfgantt}
+\usepackage{enumitem}
+\usepackage{etoolbox}
+
+\patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
+
+
+\title{Appendix to the HiPEDS Late Stage Review }
+\author{Omar J. Faqir}
+\date{September 2018}
+
+
+\begin{document}
+
+\maketitle
+
+\section{Provisional Thesis Table of Contents}
+
+\section{Planned Research to be Completed}
+
+\begin{enumerate} [series=myouterlist]
+    \item Extend data collection problem to self-triggered control subject to bounded disturbances \textit{(December 2018/January 2019)}. Include trajectory planning as triggering conditions \textit{(March 2019)}.
+\end{enumerate}
+
+\noindent We aim to apply principles of self-triggered control to the proposed data collection problem in order to determine node sleep/wake times. We start by considering bounded exogenous inputs (e.g. wind, incoming data) and compute triggering times to guarantee feasibility/performance metrics subject to the predetermined optimal control policy. This will be extended by incorporating triggering times as decision variables into the optimal control problem (OCP). The co-design of control inputs and self-triggering times has been known as ``minimum attention control'' \cite{}. 
+
+\begin{enumerate}[resume=myouterlist]
+    \item Perform feasibility and stability analysis of data collection problem, as posed in LSR poster \textit{(December 2018)}.
+\end{enumerate}
+
+\noindent We have already proposed an OCP formulation for determining energy-optimal data aggregation in a mobile network, accounting for mobility and transmission dynamics. Although closed-loop simulations have been performed, we have yet to determine the conditions under which the proposed formulation will be feasible and stable when implemented in a decreasing horizon approach.
+
+\begin{enumerate}[resume=myouterlist]
+    \item Integrate sequential quadratic programming solver (SQP) into ICLOCS2 \textit{(December 2018)}. Incorporate SQP solver into existing mesh refinement schemes  \textit{(April 2019)}. Investigate potential links between self/event-triggering conditions and mesh refinement scheme \textit{(October 2019)}.
+\end{enumerate}
+
+\noindent ICLOCS2 is a MATLAB based transcription and solution environment for formulating and solving continuous time OCPs. 
+
+\begin{enumerate}[resume=myouterlist]
+    \item Extend modelling of data collection problem, as posed in LSR poster \textit{(October 2019)}.
+\end{enumerate}
+
+\noindent We firstly would like to be able to model the effect of the aircraft banking angle on the communication channel. Secondly we would like to be able to incorporate a model for data compression, and an associated model for the computation energy required for this. Both of these models are present, to some degree, in existing literature. 
+
+\begin{enumerate}[resume=myouterlist]
+    \item Extension of self-triggering work.  
+\end{enumerate}
+
+\input{gant_chart.tex}
+
+\section{Publications(Papers \& Extended Abstracts)}
+\nocite{*}
+
+\bibliography{bibliography} 
+\bibliographystyle{ieeetr}
+\end{document}

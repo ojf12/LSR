@@ -1,0 +1,88 @@
+
+\begin{ganttchart}[hgrid, vgrid,
+newline shortcut=false,
+bar label node/.append style=%
+{align=right} ]{1}{21}
+
+\gantttitle{2018}{3}
+\gantttitle{2019}{12}
+\gantttitle{2020}{6} \ganttnewline
+\gantttitlelist{1,...,3}{1}
+\gantttitlelist{1,...,12}{1} 
+\gantttitlelist{1,...,6}{1} \ganttnewline
+  
+%Self-triggerin stuff
+\ganttbar[name=t1]{1}{1}{4}  \ganttnewline
+
+% Extension of self triggering work
+\ganttbar[name=t1]{5}{4}{16} \ganttnewline
+\ganttbar[name=t1]{5}{4}{16} \ganttnewline
+
+% Feasibility and stability analysis of current problem
+\ganttbar[name=t1]{2}{1}{3}  \ganttnewline
+
+% SQP stuff
+\ganttbar[name=t1]{3}{1}{8}  \ganttnewline
+
+% Modeling stuff
+\ganttbar[name=t1]{4}{8}{10} 
+\end{ganttchart}
+
+
+
+% \begin{ganttchart}[hgrid, vgrid,
+% newline shortcut=false,
+% bar label node/.append style=%
+% {align=right} ]{1}{36}
+%   % titles
+%   \gantttitle{2017}{3} 
+%   \gantttitle{2018}{12} 
+%   \gantttitle{2019}{12}
+%   \gantttitle{2020}{9}  \ganttnewline
+%   \gantttitlelist{1,...,36}{1}  \ganttnewline
+  
+%   \ganttmilestone{CDC Conference}{3} 
+%   \ganttmilestone{}{3} 
+%   \ganttmilestone{}{15} 
+%   \ganttmilestone{}{27} \ganttnewline
+%   \ganttmilestone{Globecomm Conference}{14} 
+%   \ganttmilestone{}{26} \ganttnewline
+  
+%   \ganttbar[name=t1]{Distributed OCP}{4}{32}  \ganttnewline
+%   \ganttbar[name=t2]{System Modeling \& \\ Problem Formulation}{1}{16}  \ganttnewline
+%   \ganttbar[name=t3]{Robust MPC}{8}{22}  \ganttnewline
+%   \ganttbar[name=t4]{Hardware \& Co-design Problem}{22}{32}  \ganttnewline
+%   \ganttbar[name=w1]{Writing and Review}{32}{36} \ganttnewline
+  
+  
+%   % ICLOCS
+%   \ganttgroup{\texttt{ICLOCS v2.1}}{1}{6}  \ganttnewline
+%   %\ganttmilestone{MPC conference 2018}{6}  \ganttnewline
+
+%   \ganttbar[name=i1]{SQP Solver}{1}{2}  \ganttnewline
+%   \ganttbar[name=i2]{Input Param.}{2}{2}  \ganttnewline
+%   \ganttbar[name=i3]{Code  Integration \\
+%   and refactoring}{4}{5}  \ganttnewline
+%   \ganttbar[name=i4]{Documentation}{3}{5}  \ganttnewline
+%   \ganttbar[name=i5]{Untitled \texttt{ICLOCS} Work}{7}{32}  \ganttnewline
+  
+%   %% PROJECT SUPERVISION
+%   \ganttgroup{Masters Project Supervision}{1}{34} \ganttnewline
+  
+%   \ganttbar[name=p1]{Comms. HW project }{1}{9}  \ganttnewline
+%   \ganttbar[name=p2]{Untitled Comms./Control Project}{13}{21}     
+%   \ganttbar[name=p3]{}{25}{33}  \ganttnewline 
+
+%   \ganttbar[name=p4]{Crane Control Project }{1}{9} 
+%   \ganttbar[name=p5]{}{13}{21}  \ganttnewline    
+  
+%   %% Links ICLOCS
+%   \ganttlink{i1}{i3}
+%   \ganttlink{i2}{i3}
+%   \ganttlink{i3}{i5}
+%   %% Links across Projects
+%   \ganttlink{p1}{p2}
+%   \ganttlink{p2}{p3}
+%   \ganttlink{p4}{p5}
+  
+% \end{ganttchart}
